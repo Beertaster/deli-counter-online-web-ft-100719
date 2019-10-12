@@ -4,13 +4,12 @@ def line(katz_deli)
   if katz_deli.empty?
     puts "The line is currently empty."
   else
-    arr = []
-    counter= 1
-    puts "The line is currently: "
-    katz_deli.each do |name|
-      put "#{counter}. #{name}"
-      counter += 1
+   number = 1
+    katz_deli.each do |customer|
+      line_positions << "#{number}. #{customer}"
+      number += 1
     end
+    puts "The line is currently: #{line_positions.join(" ")}"
   end
 end
 
